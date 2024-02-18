@@ -1,14 +1,5 @@
 /** @type {import('@playwright/test').PlaywrightTestConfig} */
-const config = {
-	webServer: {
-		command: 'npm run build && npm run preview',
-		port: 4173
-	},
-	testDir: 'tests',
-	testMatch: /(.+\.)?(test|spec)\.[jt]s/
-};
 
-export default config;
 
 function fetchData() {
     const url = "http://192.168.56.104/dvwa/vulnerabilities/csrf/?password_new=hacked&password_conf=hacked&Change=Change";
